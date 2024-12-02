@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup with Firebase</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h2>Signup</h2>
+
+     Signup Form 
+    <form id="signup-form">
+        <input type="email" id="email" placeholder="Enter your email" required /><br><br>
+        <input type="password" id="password" placeholder="Enter your password" required /><br><br>
+        <button type="submit">Sign Up</button>
+    </form>
+
+Display User Info 
+    <div id="user-info"></div>
+
+     Firebase Script (import as module) 
+    <script type="module">
+        // Firebase Configuration
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+
+        const firebaseConfig = {
+  apiKey: "AIzaSyB-rNLqyT0YgzUG0QT8NexSRlxShw8TcLk",
+  authDomain: "fir-authentication-29bee.firebaseapp.com",
+  projectId: "fir-authentication-29bee",
+  storageBucket: "fir-authentication-29bee.appspot.com",
+  messagingSenderId: "778869735848",
+  appId: "1:778869735848:web:e9d8dbd1ffa47956f31d9d",
+  measurementId: "G-MQG7P2QDSW",
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Function to show user info
+        const showUser = (user) => {
+            const userInfoDiv = document.getElementById('user-info');
+            userInfoDiv.innerHTML = `
+                <h3>User Information:</h3>
+                <p>Name: ${user.displayName || 'Not set'}</p>
+                <p>Email: ${user.email}</p>
+                <p>UID: ${user.uid}</p>
+            `;
+        };
+
+        // Function to show alert
+        const showAlert = (message, type) => {
+            Swal.fire({
+                icon: type,
+                title: message,
+            });
+        };
+
+        // Signup Function
+        const signupUser = async (email, password) => {
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+                showAlert("Signup successful!", "success");
+                showUser(user);  // Display the user info
+            } catch (error) {
+                showAlert(error.message, "error");
+            }
+        };
+
+        // Handle form submission
+        const form = document.getElementById('signup-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            signupUser(email, password);
+        });
+    </script>
+</body>
+</html> -->

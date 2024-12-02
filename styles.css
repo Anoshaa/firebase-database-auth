@@ -1,0 +1,140 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Navbar */
+.navbar {
+    z-index: 1030;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 56px;
+    /* Height of the top navbar */
+    left: 0;
+    background-color: #343a40;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar h4{
+    font-size: 25px;
+    font-weight: 501;
+}
+
+/* Sidebar buttons container */
+.sidebar-buttons {
+    margin-top: 40px;
+}
+
+/* Sidebar buttons */
+.sidebar button {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #006B54;
+    color: white;
+}
+
+.sidebar button:hover{
+    background-color:#059878;
+    color: white;
+}
+
+
+
+/* Profile Picture */
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #006B54;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profile1{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #006B54;
+    overflow: hidden;
+    margin-left:5px;
+}
+
+.profile1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    /* Space to account for the sidebar */
+    margin-top: 56px;
+    /* Space to account for the top navbar */
+    padding: 30px;
+    flex-grow: 0.5;
+    background-color: #f8f9fa;
+}
+
+.main-content h1 {
+    color: #006B54;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 30px; /* Add margin to push the heading down */
+}
+
+/* Card Styling */
+.card {
+    margin-top: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Form Label Styling */
+.form-label {
+    font-weight: bold;
+}
+
+.text-muted {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+  
